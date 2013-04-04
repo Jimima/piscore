@@ -1,0 +1,12 @@
+{
+  "name": "pisocre-interface",
+  "description": "An interface for PiScore",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.1.1",
+    "jade": "*",
+    "stylus": "*",
+    "nib": "*"
+  }
+}
