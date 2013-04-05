@@ -1,0 +1,16 @@
+!!!5
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+  body
+    header
+      h1 Scoreboard
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p Copyright 2013 James Taylor

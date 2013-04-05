@@ -1,0 +1,30 @@
+extend layout
+block content
+  script()
+    $(document).ready(function(){
+    $("#div1").load("score");
+    });
+  p
+    | Score:
+  div(id="div1")
+    | Loading score...
+  script()
+    (function poll(){
+       setTimeout(function(){
+          $.ajax({ url: "score", success: function(data){
+            //Update the score
+            $("#div1").load("score");
+            //Setup the next poll recursively
+            poll();
+          }});
+      }, 2000);
+    })();
+block sidebar
+  .widget
+    h1 Widget
+    p
+      | Sed auctor neque eu tellus rhoncus ut
+      | eleifend nibh porttitor. Ut in nulla enim.
+    p
+      | Vivamus hendrerit arcu sed erat molestie
+      | vehicula.
